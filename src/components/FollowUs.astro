@@ -1,0 +1,34 @@
+---
+import Facebook from "@/icons/Facebook.astro";
+---
+
+<section
+  class="relative flex flex-col bg-[url('/inicio/followus-bg.jpg')] bg-cover bg-fixed bg-top after:absolute after:inset-0 after:bg-primary/60 md:px-20"
+>
+  <div
+    class="z-10 m-auto flex flex-col items-center px-8 py-20 text-center md:py-14"
+  >
+    <h2 class="mb-6 text-2xl font-bold text-white">
+      ¡Síguenos en Facebook y vive la pasión futbolera!
+    </h2>
+    <a
+      href="https://facebook.com/Urb.LaReserva"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-1 rounded-full bg-white/90 py-1 pl-3 pr-5 transition-all hover:scale-110 hover:bg-white md:hidden"
+    >
+      <Facebook className="size-8 text-primary" />
+      <p class="font-medium">Seguir</p>
+    </a>
+    <div class="hidden rounded-md bg-slate-100 p-3 md:block">
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMisterexpensivestudio%2F&tabs&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+        width="300"
+        height="130"
+        style="border:none;overflow:hidden"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+    </div>
+  </div>
+</section>

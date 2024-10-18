@@ -1,0 +1,76 @@
+---
+import Clock from "@/icons/Clock.astro";
+import MapPin from "@/icons/MapPin.astro";
+import Phone from "@/icons/Phone.astro";
+import Mail from "@/icons/Mail.astro";
+import User from "@/icons/User.astro";
+import WhatsApp from "@/icons/WhatsApp.astro";
+import Speakerphone from "@/icons/Speakerphone.astro";
+---
+
+<section class="mx-auto max-w-[1200px] px-6 py-20">
+  <div class="flex flex-col items-center">
+    <h2
+      class="mb-8 flex flex-col items-center justify-center gap-2 text-primary md:flex-row"
+    >
+      <User class="size-10 md:size-7" />
+      <p class="text-center text-xl font-bold md:text-2xl">
+        Información de contacto
+      </p>
+    </h2>
+    <div class="mb-8 flex flex-col gap-4 text-base">
+      <p class="flex items-center gap-2">
+        <Clock class="size-5 text-primary" />
+        10:00 AM - 9:00 PM de Lunes - Sábado
+      </p>
+      <p class="flex items-center gap-2">
+        <MapPin class="size-5 text-primary" />
+        Ica, Perú
+      </p>
+      <a href="tel:+922935333" class="group/contact flex items-center gap-2">
+        <Phone class="size-5 text-primary" />
+        <p
+          class="group-hover/contact:text-primary group-hover/contact:underline"
+        >
+          922 935 333
+        </p>
+      </a>
+      <a
+        href="mailto:director@mrexpensivestudio.com"
+        class="group/contact flex items-center gap-2"
+        1
+      >
+        <Mail class="size-5 text-primary" />
+        <p
+          class="group-hover/contact:text-primary group-hover/contact:underline"
+        >
+          director@mrexpensivestudio.com
+        </p>
+      </a>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <p class="mb-3 flex items-center gap-1 font-semibold text-primary">
+        <Speakerphone class="size-6" />
+        Publicita con nosotros:
+      </p>
+      <div class="flex items-center gap-4">
+        <a
+          href="https://wa.me/51922935333?text=Hola, Mr. Expensive. Quisiera algo de información."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-full bg-[#2EC429] px-4 py-2 text-sm text-white transition-all hover:scale-110"
+        >
+          <WhatsApp class="size-5 stroke-2" />
+          Chatear
+        </a>
+        <a
+          href="tel:922935333"
+          class="flex items-center gap-1 rounded-full bg-primary px-4 py-2 text-sm text-white transition-all hover:scale-110"
+        >
+          <Phone class="size-5 stroke-2" />
+          Llamar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

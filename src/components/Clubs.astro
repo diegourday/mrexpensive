@@ -1,0 +1,50 @@
+---
+import clubs from "@/data/clubs.json";
+import Check from "@/icons/Check.astro";
+
+interface Club {
+  name: string;
+  href: string;
+  img: string;
+}
+
+const CLUBS: Club[] = clubs;
+---
+
+<section id="clubes-y-empresas" class="bg-slate-50 px-6 pt-20">
+  <div class="mx-auto max-w-[1200px]">
+    <h2
+      class="mb-8 flex flex-col items-center justify-center gap-2 md:flex-row"
+    >
+      <Check class="size-10 text-primary md:size-7" />
+      <p class="text-center text-xl font-bold text-primary md:text-2xl">
+        Clubes que confían en nosotros
+      </p>
+    </h2>
+    <div class="mx-auto flex w-fit flex-wrap justify-center gap-4">
+      {
+        CLUBS.map(({ href, img, name }) => (
+          <a href={href} target="_blank">
+            <article class="group/article grid w-40 rounded-md bg-white p-3 transition-shadow md:w-52">
+              <div class="relative grid h-40 w-full items-center justify-items-center overflow-hidden rounded-lg">
+                <img
+                  class="absolute h-[110%] object-cover opacity-0 transition-all group-hover/article:h-full group-hover/article:opacity-100"
+                  src="/inicio/grass.webp"
+                  alt="Imagen de Fondo Grass - Mr Expensive Studio"
+                />
+                <img
+                  class="z-10 size-28 rounded-lg object-contain transition-all group-hover/article:scale-110"
+                  src={`/clubs/${img}`}
+                  alt={name}
+                />
+              </div>
+              <h3 class="pt-2 text-center text-sm font-semibold transition-all group-hover/article:text-primary md:text-base">
+                {name}
+              </h3>
+            </article>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

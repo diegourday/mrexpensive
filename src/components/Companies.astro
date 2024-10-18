@@ -1,0 +1,45 @@
+---
+import companies from "@/data/companies.json";
+import Check from "@/icons/Check.astro";
+
+interface Company {
+  name: string;
+  href?: string;
+  img: string;
+}
+
+const COMPANIES: Company[] = companies;
+---
+
+<section id="clubes-y-empresas" class="bg-slate-50 px-6 pb-20 pt-10">
+  <div class="mx-auto max-w-[1200px]">
+    <h2
+      class="mb-8 flex flex-col items-center justify-center gap-2 md:flex-row"
+    >
+      <Check class="size-10 text-primary md:size-7" />
+      <p class="text-center text-xl font-bold text-primary md:text-2xl">
+        Empresas que confían en nosotros
+      </p>
+    </h2>
+    <div class="mx-auto flex w-fit flex-wrap justify-center gap-4">
+      {
+        COMPANIES.map(({ href, img, name }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            <article class="group/article grid w-40 rounded-md bg-white p-3 transition-shadow md:w-52">
+              <div class="relative grid h-40 w-full items-center justify-items-center overflow-hidden rounded-lg outline-none outline-2 outline-transparent transition-all group-hover/article:outline-primary">
+                <img
+                  class="size-28 rounded-lg object-contain transition-all group-hover/article:scale-110"
+                  src={`/companies/${img}`}
+                  alt={name}
+                />
+              </div>
+              <h3 class="pt-2 text-center text-sm font-semibold transition-all group-hover/article:text-primary md:text-base">
+                {name}
+              </h3>
+            </article>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

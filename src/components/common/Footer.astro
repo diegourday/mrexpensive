@@ -1,0 +1,50 @@
+---
+import Facebook from "@/icons/Facebook.astro";
+import Youtube from "@/icons/Youtube.astro";
+import WhatsApp from "@/icons/WhatsApp.astro";
+import Logo from "./Logo.astro";
+---
+
+<footer>
+  <div class="bg-primary">
+    <div class="mx-auto flex flex-col items-center justify-between px-4 py-6">
+      <div class="mb-4 flex flex-col items-center gap-4">
+        <a href="/" class="text-white/90 transition-colors hover:text-white">
+          <Logo class="h-16" />
+        </a>
+        <p class="text-sm italic text-white/90">
+          Creamos lo que tú nos inspiras.
+        </p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a
+          href="https://www.facebook.com/misterexpensivestudio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-full bg-white/90 p-1 transition-all hover:scale-110 hover:bg-white"
+        >
+          <Facebook className="size-6 text-primary" />
+        </a>
+        <a
+          href="https://wa.me/51922935333?text=Hola, Mr. Expensive. Quisiera algo de información."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-full bg-white/90 p-1 transition-all hover:scale-110 hover:bg-white"
+        >
+          <WhatsApp className="size-6 text-primary" />
+        </a>
+        <a
+          href="https://www.youtube.com/@misterexpensivestudio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 rounded-full bg-white/90 p-1 transition-all hover:scale-110 hover:bg-white"
+        >
+          <Youtube className="size-6 text-primary" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="bg-[#1d1d1d] py-3 text-center text-sm text-white/80">
+    © {new Date().getFullYear()} Mister Expensive Studio
+  </p>
+</footer>
